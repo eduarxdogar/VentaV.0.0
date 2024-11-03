@@ -6,6 +6,7 @@ using System.Linq;
 using WsVenta.Models;
 using WsVenta.Models.Response;
 using WsVenta.Models.Request;
+using Microsoft.AspNetCore.Authorization;
 
 
 
@@ -13,6 +14,7 @@ namespace WsVenta.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ClienteController : ControllerBase
     {
         [HttpGet]
